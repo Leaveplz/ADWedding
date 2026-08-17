@@ -7,7 +7,11 @@ export function HeroSection({ onRsvp }: { onRsvp: () => void }) {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      style={{ minHeight: "100svh", paddingTop: "5rem", paddingBottom: "2rem" }}
+    >
       {/* Layered gradient background */}
       <div
         className="absolute inset-0"
@@ -115,7 +119,7 @@ export function HeroSection({ onRsvp }: { onRsvp: () => void }) {
               src={assetUrl("anya-dima-hero.jpg")}
               alt="Фото пары"
               className="w-full h-full object-cover"
-              style={{ borderRadius: "1.6rem" }}
+              style={{ borderRadius: "1.6rem", objectPosition: "58% center" }}
             />
             {/* Soft overlay */}
             <div

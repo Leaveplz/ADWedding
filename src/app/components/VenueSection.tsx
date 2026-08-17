@@ -4,6 +4,7 @@ import { MapPin, Clock, Car, Building2 } from "lucide-react";
 import { useScrollReveal } from "./useScrollReveal";
 
 const schedule = [
+  { time: "14:30", label: "Сбор гостей во дворце бракосочетания" },
   { time: "15:00", label: "Церемония во дворце бракосочетания" },
   { time: "16:30", label: "Общий выезд в замок" },
   { time: "18:00", label: "Приветственные напитки в замке" },
@@ -66,7 +67,7 @@ export function VenueSection() {
               address: "Санкт-Петербург",
               street: "Фурштатская улица, 52",
               city: "Дворец бракосочетания №2",
-              time: "15:00",
+              time: "14:30",
               img: assetUrl("wedding-palace-2.png"),
               mapUrl: registryMapUrl,
             },
@@ -78,7 +79,7 @@ export function VenueSection() {
               street: "Ломоносовский район, Пениковское с/пос",
               city: "садовое товарищество Лада, 427",
               time: "18:00",
-              img: assetUrl("castle-exterior-garden.jpg"),
+              img: assetUrl("castle-exterior-terrace.jpg"),
               mapUrl: yandexMapUrl,
             },
           ].map((venue, i) => (
