@@ -14,6 +14,7 @@ const schedule = [
 const yandexMapUrl = "https://yandex.ru/maps/-/CTg6MRYm";
 const registryMapUrl = "https://yandex.ru/maps/-/CTg6uAz5";
 const yandexMapEmbedUrl = `https://yandex.ru/map-widget/v1/?text=${encodeURIComponent("Ленинградская область, Ломоносовский район, Пениковское сельское поселение, садовое товарищество Лада, 427")}&z=14`;
+const assetUrl = (filename: string) => `${import.meta.env.BASE_URL}images/${filename}`;
 
 export function VenueSection() {
   const [activeTab, setActiveTab] = useState<"registry" | "direct">("registry");
@@ -66,7 +67,7 @@ export function VenueSection() {
               street: "Фурштатская улица, 52",
               city: "Дворец бракосочетания №2",
               time: "15:00",
-              img: "/images/wedding-palace-2.png",
+              img: assetUrl("wedding-palace-2.png"),
               mapUrl: registryMapUrl,
             },
             {
@@ -77,7 +78,7 @@ export function VenueSection() {
               street: "Ломоносовский район, Пениковское с/пос",
               city: "садовое товарищество Лада, 427",
               time: "18:00",
-              img: "/images/castle-exterior-garden.jpg",
+              img: assetUrl("castle-exterior-garden.jpg"),
               mapUrl: yandexMapUrl,
             },
           ].map((venue, i) => (

@@ -1,6 +1,8 @@
 import { motion } from "motion/react";
 import { useScrollReveal } from "./useScrollReveal";
 
+const assetUrl = (filename: string) => `${import.meta.env.BASE_URL}images/${filename}`;
+
 const amenities = [
   {
     emoji: "🏰",
@@ -36,22 +38,22 @@ const amenities = [
 
 const castlePhotos = [
   {
-    src: "/images/castle-exterior-garden.jpg",
+    src: assetUrl("castle-exterior-garden.jpg"),
     alt: "Замок и территория с елями",
     className: "sm:col-span-2",
   },
   {
-    src: "/images/castle-exterior-terrace.jpg",
+    src: assetUrl("castle-exterior-terrace.jpg"),
     alt: "Замок с террасой",
     className: "",
   },
   {
-    src: "/images/castle-garden-pines.jpg",
+    src: assetUrl("castle-garden-pines.jpg"),
     alt: "Зеленая территория замка",
     className: "",
   },
   {
-    src: "/images/castle-pool-sauna.jpg",
+    src: assetUrl("castle-pool-sauna.jpg"),
     alt: "Бассейн и сауна в замке",
     className: "sm:col-span-2",
   },
@@ -114,7 +116,7 @@ export function EstateSection() {
           style={{ height: "min(360px, 50vw)", boxShadow: "0 20px 60px rgba(155,114,207,0.15)" }}
         >
           <img
-            src="/images/castle-exterior-terrace.jpg"
+            src={assetUrl("castle-exterior-terrace.jpg")}
             alt="Замок в Ленинградской области"
             className="w-full h-full object-cover"
           />

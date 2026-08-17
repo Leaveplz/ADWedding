@@ -1,6 +1,8 @@
 import { motion } from "motion/react";
 import { useScrollReveal } from "./useScrollReveal";
 
+const assetUrl = (filename: string) => `${import.meta.env.BASE_URL}images/${filename}`;
+
 export function HeroSection({ onRsvp }: { onRsvp: () => void }) {
   const { ref, isVisible } = useScrollReveal();
 
@@ -110,7 +112,7 @@ export function HeroSection({ onRsvp }: { onRsvp: () => void }) {
             style={{ boxShadow: "inset 0 0 30px rgba(155,114,207,0.1)" }}
           >
             <img
-              src="/images/anya-dima-hero.jpg"
+              src={assetUrl("anya-dima-hero.jpg")}
               alt="Фото пары"
               className="w-full h-full object-cover"
               style={{ borderRadius: "1.6rem" }}

@@ -1,34 +1,36 @@
 import { motion } from "motion/react";
 import { useScrollReveal } from "./useScrollReveal";
 
+const assetUrl = (filename: string) => `${import.meta.env.BASE_URL}images/${filename}`;
+
 const photos = [
   {
-    src: "/images/story-flowers.jpg",
+    src: assetUrl("story-flowers.jpg"),
     alt: "Аня и Дима у цветущего куста",
     span: "row-span-2",
   },
   {
-    src: "/images/story-sochi-night.jpg",
+    src: assetUrl("story-sochi-night.jpg"),
     alt: "Аня и Дима вечером у морского вокзала",
     span: "",
   },
   {
-    src: "/images/story-boat.jpg",
+    src: assetUrl("story-boat.jpg"),
     alt: "Аня и Дима на прогулке по Неве",
     span: "",
   },
   {
-    src: "/images/story-polaroids.jpg",
+    src: assetUrl("story-polaroids.jpg"),
     alt: "Полароидные фотографии Ани и Димы",
     span: "row-span-2",
   },
   {
-    src: "/images/story-lake.png",
+    src: assetUrl("story-lake.png"),
     alt: "Аня и Дима у озера",
     span: "",
   },
   {
-    src: "/images/story-winter.jpg",
+    src: assetUrl("story-winter.jpg"),
     alt: "Аня и Дима у новогодней елки",
     span: "",
   },
